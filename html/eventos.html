@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Space</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+
+</head>
+
+<body>
+    <nav class="container">
+        <ul>
+            <li>
+                <a href="../index.html"><img class="logo" src="../img/logo.png" alt="logo de la página"></a>
+            </li>
+            <li>
+                <a class="sitio" href="noticias.html">NOTICIAS</a>
+            </li>
+            <li>
+                <a class="sitio" href="eventos.html">EVENTOS</a>
+            </li>
+            <li>
+                <a class="sitio" href="players.html">TOP PLAYERS</a>
+            </li>
+            <li>
+                <a class="sitio" href="historia.html">HISTORIA</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header class="header">
+        <h1 class="bienvenida">
+            En esta sección encontrarás información acerca de los próximos eventos
+        </h1>
+    </header>
+
+    <div><table class="torneos" border="border">
+        <th>Nombre</th>
+        <th>Empieza</th>
+        <th>Finaliza</th>
+        <th>Ganador</th>
+        <tr>
+            <td>Oslo Cup</td>
+            <td>22/4</td>
+            <td>28/4</td>
+            <td>Jan-Krzysztof Duda</td>
+        </tr>
+        <tr>
+            <td>Torneo de Candidatos FIDE 2022</td>
+            <td>10/6</td>
+            <td>19/6</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Campeonato Mundial de Equipos 2022</td>
+            <td>19/6</td>
+            <td>30/6</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Olimpiadas de Ajedrez n.°44</td>
+            <td>28/7</td>
+            <td>10/8</td>
+            <td></td>
+        </tr>
+    </table></div>
+
+    <div class="form">
+        <p>Si te gustaría prepararte para tu próximo torneo, ¡inscríbete en los cursos patrocinados por Chess Space, de la mano del argentino GM Alan Pichot!
+        </p>
+        <form>
+            <label for="nombre_apellido">Ingrese su nombre completo:</label>
+            <input type="text" name="nombre_apellido"><br>
+
+            <label for="email">Ingrese su e-mail:</label>
+            <input type="email" name="email" id="email">
+
+            <div>Jugador federado</div>
+            <input type="radio" name="experiencia" value="Jugador federado" />
+            <div>Amateur</div>
+            <input type="radio" name="experiencia" value="Amateur"/><br>
+            
+            <label for="ELO">Puntuación ELO:</label>
+            <select name="ELO">
+                <option value="principiante">0-800</option>
+                <option value="intermedio">801-1500</option>
+                <option value="avanzado">1501-2000</option>
+                <option value="experto">+2000</option>
+            </select>
+
+            <div>¿Te gustaría participar en torneos?</div>
+            <label for="abiertos">Abiertos</label>
+            <input type="checkbox" name="abiertos" value="abiertos"/>
+            <label for="federados">Federados</label>
+            <input type="checkbox" name="federados" value="federados"/><br>
+
+            <input type="submit" value="Enviar formulario">
+            <input type="reset" value="Borrar">
+        </form>
+    </div>
+
+    <footer>
+        <p>Para más información, contáctanos! <br>
+            info@chessspace.com </p>
+    </footer>
+
+        
+
+</body>
+
+</html>

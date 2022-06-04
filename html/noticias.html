@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Space</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+
+</head>
+
+<body>
+    <nav class="container">
+        <ul>
+            <li>
+                <a href="../index.html"><img class="logo" src="../img/logo.png" alt="logo de la página"></a>
+            </li>
+            <li>
+                <a class="sitio" href="noticias.html">NOTICIAS</a>
+            </li>
+            <li>
+                <a class="sitio" href="eventos.html">EVENTOS</a>
+            </li>
+            <li>
+                <a class="sitio" href="players.html">TOP PLAYERS</a>
+            </li>
+            <li>
+                <a class="sitio" href="historia.html">HISTORIA</a>
+            </li>
+        </ul>
+    </nav>
+
+    <h3 class="destacado">Destacado de esta semana:</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/61KLlhQ2kJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    
+
+
+
+    <div class="formulario">
+        <p>Si te gusta el contenido y quieres recibir nuestras noticias e información relalcionada,
+            completa el siguiente formulario:
+        </p>
+        <form>
+            <label for="nombre_apellido">Ingrese su nombre completo:</label>
+            <input type="text" name="nombre_apellido"><br>
+
+            <label for="email">Ingrese su e-mail:</label>
+            <input type="email" name="email" id="email">
+
+            <div>Jugador federado</div>
+            <input type="radio" name="experiencia" value="Jugador federado" />
+            <div>Amateur</div>
+            <input type="radio" name="experiencia" value="Amateur"/><br>
+            
+            <label for="ELO">Puntuación ELO:</label>
+            <select name="ELO">
+                <option value="principiante">0-800</option>
+                <option value="intermedio">801-1500</option>
+                <option value="avanzado">1501-2000</option>
+                <option value="experto">+2000</option>
+            </select>
+
+            <div>¿Te gustaría participar en torneos?</div>
+            <label for="abiertos">Abiertos</label>
+            <input type="checkbox" name="abiertos" value="abiertos"/>
+            <label for="federados">Federados</label>
+            <input type="checkbox" name="federados" value="federados"/><br>
+
+            <input type="submit" value="Enviar formulario">
+            <input type="reset" value="Borrar">
+        </form>
+    </div>
+</body>
+
+<footer>
+    <p>Para más información, contáctanos! <br>
+        info@chessspace.com </p>
+</footer>
+
+</html>

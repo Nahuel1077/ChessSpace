@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* GRID */
+.barraNav { grid-area: nav; }
+.noticias { grid-area: noticias; }
+.video { grid-area: video; }
+.tabla { grid-area: tabla; }
+.footer { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+  'nav nav nav nav'
+  'noticias noticias noticias noticias'
+  'video video tabla tabla'
+  'footer footer footer footer';
+  grid-template-rows: 1fr 9fr 6fr 1fr;
+  grid-template-columns: auto;
+}
+
+.grid-container > div {
+  text-align: center;
+}
+
+body {
+    background-image: url(../img/pattern.png);
+    font-family: 'Oswald', sans-serif;
+    font-size: medium;
+    font-weight: bolder;
+    color: #dcdde1;
+}
+
+/* Barra de navegación */
+div .barraNav {
+    width: 100%;
+
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    background-color: darkred;
+    text-align: left;
+}
+
+.container ul li{
+    display: inline-block;
+    font-size: medium;
+}
+
+.sitio {
+    padding-left: 9rem;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+.logo {
+    width: 25px;
+}
+
+/*Header*/
+header {
+    padding-top: 30px;
+}
+
+/*Cards noticias*/
+.noticias {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 90%;
+    height: 90%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+.card {
+    border: solid darkred;
+    width: 80%;
+    height: 95%;
+    justify-self: center;
+    text-align: -webkit-center;
+    background-color: rgb(139,0,0,0.8);
+}
+
+.card p {
+    width: 100%;
+}
+
+.card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+/*Tabla*/
+.tabla table{
+    width: 80%;
+    height: 20rem;
+}
+
+.video {
+    width: 80%;
+}
+
+/*General*/
+.formulario, header, footer, .video, .tabla, .form, .mensaje{
+    padding-top: 5rem;
+}
+
+/*Historia*/
+#historia, #actualidad {
+    border-bottom: solid darkred;
+}
+.historia {
+    padding-top: 30px;
+    padding-left: 5%;
+    width: 90%;
+    text-align: justify;
+}
+#titulo {
+    text-decoration: underline solid darkred;
+    padding-top: 3rem;
+}
+
+/*Top Players*/
+#topPlayers {
+    text-decoration: underline solid darkred;
+    padding-top: 40px;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 3fr 3fr 3fr 3fr 3fr;
+    justify-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.player {
+    padding-top: 5rem;
+}
+
+.player p {
+    text-decoration: underline solid darkred;
+}
+
+/*Noticias*/
+.destacado {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    text-decoration: underline solid darkred;
+}
+
+/*Eventos*/
+.torneos {
+    background-color: rgb(139,0,0,0.4);
+    text-align: center;
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+}
+
+/*Estilos Mobile*/
+/*Smartphones*/
+@media (max-width: 320px) {    
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+        'nav'
+        'noticias'
+        'video'
+        'tabla'
+        'footer';
+        grid-template-rows: auto;
+        grid-template-columns: 320px;
+      }
+    .nav, .noticias, .video, .tabla, footer {
+        width: 320px;
+    }
+    .noticias {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 90%;
+        height: 90%;
+    }
+    .card {
+        width: 100%;
+        height: 100%;
+    }
+    .tabla table{
+        width: 170%;
+        height: 300px;
+    }
+
+    /*Top Players*/
+    .players {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr ;
+        grid-template-rows: 3fr 3fr 3fr 3fr 3fr 3fr;
+        justify-items: center;
+        justify-content: space-between;
+        padding-top: 40px;
+        text-align: center;
+    }
+    
+    .player {
+        padding-top: 5rem;
+    }
+}
+
+/*Tablets*/
+@media screen and (min-width: 321px) and (max-width:768px) {
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+        'nav'
+        'noticias'
+        'video'
+        'tabla'
+        'footer';
+        grid-template-rows: auto;
+        grid-template-columns: 320px;
+      }
+    .nav, .noticias, .video, .tabla, footer {
+        width: 320px;
+    }
+    .noticias {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+    }
+    .card {
+        width: 100%;
+        height: 100%;
+    }
+    /*Tabla*/
+.tabla table{
+    width: 180%;
+    height: 300px;
+}
+
+/*Top Players*/
+.players {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr ;
+    grid-template-rows: 3fr 3fr 3fr 3fr 3fr 3fr;
+    justify-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    text-align: center;
+}
+}
