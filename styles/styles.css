@@ -98,6 +98,16 @@ header {
     object-fit: cover;
 }
 
+/*ANIMACIÓN*/
+.card:hover{
+    transform: scale(1.5);
+} 
+
+.card {
+    transition-property: all;
+    transition-duration: 2s;
+}
+
 /*Tabla*/
 .tabla table{
     width: 80%;
@@ -152,6 +162,16 @@ header {
     text-decoration: underline solid darkred;
 }
 
+/*ANIMACIÓN*/
+.player:hover{
+    transform: scale(1.5);
+} 
+
+.player {
+    transition-property: all;
+    transition-duration: 2s;
+}
+
 /*Noticias*/
 .destacado {
     padding-top: 40px;
@@ -198,6 +218,8 @@ footer {
         width: 100%;
         height: 100%;
     }
+    .card:hover
+    { transform: none;}
     .tabla table{
         width: 170%;
         height: 300px;
@@ -217,6 +239,10 @@ footer {
     .player {
         padding-top: 5rem;
     }
+
+    .player:hover{
+        transform: none;
+    } 
 }
 
 /*Tablets*/
@@ -246,6 +272,8 @@ footer {
         width: 100%;
         height: 100%;
     }
+    .card:hover
+    { transform: none;}
     /*Tabla*/
 .tabla table{
     width: 180%;
@@ -262,4 +290,7 @@ footer {
     padding-top: 40px;
     text-align: center;
 }
+.player:hover{
+    transform: none;
+} 
 }
