@@ -248,7 +248,13 @@ footer {
 }
 .player:hover{
     transform: none;
-} 
+}
+
+/*Noticias*/
+.videoNoticias{
+    width: 300px;
+    height: 180px;
+}
 }
 
 /*Tablets*/
@@ -303,6 +309,11 @@ footer {
 .player:hover{
     transform: none;
 } 
+/*Noticias*/
+.videoNoticias{
+    width: 320px;
+    height: 200px;
+}
 }
 
 /*TABLETS*/
@@ -356,4 +367,9 @@ footer {
 .player:hover{
     transform: none;
 } 
+/*Noticias*/
+.videoNoticias{
+    width: 450px;
+    height: 300px;
+}
 }
