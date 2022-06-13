@@ -59,7 +59,7 @@ li.nav-item {
 }
 
 .bg-propio {
-    background-color: darkred;
+    background-image: url(../img/cardsBackground.jpg);
     width: 100%;
 }
 
@@ -87,12 +87,12 @@ body {
 }
 
 .card {
-    border: solid darkred;
+    border: solid black;
     width: 80%;
     height: 95%;
     justify-self: center;
     text-align: -webkit-center;
-    background-color: rgb(139,0,0,0.8);
+    background-image: url(../img/cardsBackground.jpg);
 }
 
 .card img {
@@ -139,7 +139,7 @@ footer {
 
 /*Historia*/
 #historia, #actualidad {
-    border-bottom: solid darkred;
+    border-bottom: solid rgb(184,134,11);
 }
 .historia {
     padding-top: 30px;
@@ -148,7 +148,7 @@ footer {
     text-align: justify;
 }
 #titulo {
-    text-decoration: underline solid darkred;
+    text-decoration: underline solid  rgb(184,134,11);
     padding-top: 3rem;
 }
 
@@ -162,12 +162,12 @@ footer {
 .destacado {
     padding-top: 40px;
     padding-bottom: 10px;
-    text-decoration: underline solid darkred;
+    text-decoration: underline solid rgb(184,134,11);
 }
 
 /*Top Players*/
 #topPlayers {
-    text-decoration: underline solid darkred;
+    text-decoration: underline solid rgb(184,134,11);
     padding-top: 40px;
 }
 
@@ -186,7 +186,7 @@ footer {
 }
 
 .player p {
-    text-decoration: underline solid darkred;
+    text-decoration: underline solid rgb(184,134,11);
 }
 
 /*ANIMACIÓN*/
