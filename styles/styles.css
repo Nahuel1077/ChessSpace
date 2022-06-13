@@ -1,36 +1,3 @@
-/* GRID
-.navbar { grid-area: nav; }
-.header {grid-area: header;}
-.gridCards { grid-area: noticias; }
-.multimedia { grid-area: multimedia; }
-.footer { grid-area: footer; }
-
-.webGrid {
-    display: grid;
-  grid-template-areas:
-  'nav nav'
-  'header header '
-  'noticias noticias'
-  'multimedia'
-  'footer footer';
-  grid-template-rows: auto 2fr 4fr 4fr 1fr;
-  grid-template-columns: auto;
-}
-
-.video { grid-area: video;}
-.tabla { grid-area: tabla;}
-
-.multimedia {
-    display: grid;
-    grid-template-areas: 
-    'video video tabla tabla';
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-}
-
-.grid-container > div {
-  text-align: center;
-} */
 *{
     margin: 0;
     padding: 0;
