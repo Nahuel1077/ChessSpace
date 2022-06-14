@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Body*/
+body {
+    background-image: url(../img/pattern.png);
+    font-family: 'Oswald', sans-serif;
+    font-size: medium;
+    font-weight: bolder;
+    color: #dcdde1;
+}
+
+/*Header*/
+header {
+    padding-top: 30px;
+}
+
+/*NavBar*/
+.logo {
+    width: 30px;
+}
+
+div#navbarScroll {
+    flex: none;
+    ul li a {
+        color: white;
+        text-decoration: none;}
+}
+
+li.nav-item {
+    padding-right: 9rem;
+    a {
+        color: white;
+        padding-left: 13rem;
+    }
+}
+
+.bg-propio {
+    background-image: url(../img/cardsBackground.jpg);
+    width: 100%;
+}
+
+/*Footer*/
+footer {
+    text-align: center;
+}
+/*Fin de estilos generales*/
+
