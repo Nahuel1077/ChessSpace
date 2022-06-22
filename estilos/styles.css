@@ -21,6 +21,7 @@ header {
 /*NavBar*/
 .logo {
   width: 30px;
+  background-color: white;
 }
 
 div#navbarScroll {
@@ -43,6 +44,10 @@ li.nav-item a {
   padding-left: 13rem;
 }
 
+button.navbar-toggler {
+  background-color: white;
+}
+
 .bg-propio {
   background-image: url(../img/cardsBackground.jpg);
   width: 100%;
@@ -51,6 +56,56 @@ li.nav-item a {
 /*Footer*/
 footer {
   text-align: center;
+  /*Mapas*/
+  /*Extend*/
+  /*mixin*/
+}
+
+footer .redes {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+footer .btn--twitter {
+  background-color: #55acee;
+}
+
+footer .btn--facebook {
+  background-color: #3a5795;
+}
+
+footer .btn--instagram {
+  background-color: #f34500;
+}
+
+footer .redSocial, footer .redSocial--email, footer .redSocial--wp {
+  border: 2px solid gold;
+  color: black;
+  background-color: darkgreen;
+}
+
+footer .redSocial--email {
+  border-radius: 3px;
+  font-weight: bolder;
+  background-color: orangered;
+}
+
+footer .redSocial--wp {
+  font-weight: lighter;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+footer .contacto {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+footer .mixin {
+  height: 50px;
+  width: 200px;
+  background-color: darkred;
+  display: inline-block;
 }
 
 /*Fin de estilos generales*/
