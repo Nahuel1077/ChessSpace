@@ -5,7 +5,7 @@
 
 /*Body*/
 body {
-    background-image: url(../img/pattern.png);
+    /*background-image: url(../img/pattern.png);*/
     font-family: 'Oswald', sans-serif;
     font-size: medium;
     font-weight: bolder;
@@ -50,51 +50,35 @@ button.navbar-toggler {
 /*Footer*/
 footer {
     text-align: center;
-    .redes {
-        display: inline-flex;
-    }
-    /*Mapas*/
-    $redes: (
-            twitter: #55acee,
-            facebook: #3a5795,
-            instagram: #f34500,
-    );
-    @each $redsocial, $color in $redes {
-        .btn--#{$redsocial}{
-            background-color: $color;
-        }
-    }
-    /*Extend*/
-    .redSocial {
-        border: 2px solid gold;
-        color: black;
-        background-color: darkgreen;
-    }
-    .redSocial--email {
-        @extend .redSocial;
-        border-radius: 3px;
-        font-weight: bolder;
-        background-color: orangered
-    }
-    .redSocial--wp{
-        @extend .redSocial;
-        font-weight: lighter;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
-    }
-    .contacto {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-    }
-    /*mixin*/
-    @mixin sizes ($width, $height){
-        height: $height;
-        width: $width;
-    }
-    .mixin {
-        @include sizes (200px, 50px);
-        background-color: darkred;
-        display: inline-block;
-    }
+    padding-top: 1rem;
+    position: relative;
 }
+
+  /*Script Particles*/
+  
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+html,body{ 
+	width:100%;
+	height:100%;
+	background:rgb(0, 0, 0);
+}
+
+  /* ---- particles.js container ---- */
+  
+  #particles-js{
+    width: 100%;
+    height: 100%;     
+    background: #000000; 
+    position: fixed;
+    background-size: cover;
+    background-image: url('');
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
 /*Fin de estilos generales*/
 

@@ -15,6 +15,7 @@
 </head>
 
 <body>
+  <div id="particles-js"></div>
     <nav class="navbar navbar-expand-lg navbar-light bg-propio">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html"><img class="logo" src="../img/logo.svg" alt="logo de la página"></a>
@@ -41,46 +42,152 @@
       </nav>
 
     <h1 class="destacado">Noticias de esta semana:</h1>
-    <iframe class="videoNoticias" width="560" height="320" src="https://www.youtube.com/embed/61KLlhQ2kJo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     
-
-
+    <div class="noticiasGrid"><div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../img/firouzjaLoses.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5>Firouzja pierde nuevamente</h5>
+            <p>El joven ajedrecista pierde y queda último en la lista</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../img/rapportDraws.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5>Richard Rapport empata</h5>
+            <p>Luego de una partida igualada, Rapport logra el empate, quedando tercero</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../img/nepoWins.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5>Ian en primer lugar</h5>
+            <p>"Nepo" gana nuevamente, posicionándose en primer lugar con 4.5/6</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../img/hikaruDraws.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5>Hikaru Nakamura empata</h5>
+            <p>El querido por la gente, Hikaru, logra el empate contra Duda</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../img/dingCandidates.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5>Ding Liren logra empatar contra Fabiano Caruana</h5>
+            <p>El #2 del mundo, Ding Liren, empató por 3ra vez consecutiva en el torneo</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="../img/magnusWaiting.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption  d-md-block">
+            <h5>Mientras tanto...</h5>
+            <p>Magnus Carlsen, el #1, criticó fuertemente a los candidatos</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
 
     <div class="formulario"data-aos="fade-right">
-        <p>Si te gusta el contenido y quieres recibir nuestras noticias e información relalcionada,
-            completa el siguiente formulario:
-        </p>
-        <form>
-            <label for="nombre_apellido">Ingrese su nombre completo:</label>
-            <input type="text" name="nombre_apellido"><br>
+      <p>Si te gusta el contenido y quieres recibir nuestras noticias e información relalcionada,
+          completa el siguiente formulario:
+      </p>
+      <form>
+          <label for="nombre_apellido">Ingrese su nombre completo:</label>
+          <input type="text" name="nombre_apellido"><br>
 
-            <label for="email">Ingrese su e-mail:</label>
-            <input type="email" name="email" id="email">
+          <label for="email">Ingrese su e-mail:</label>
+          <input type="email" name="email" id="email">
 
-            <div>Jugador federado</div>
-            <input type="radio" name="experiencia" value="Jugador federado" />
-            <div>Amateur</div>
-            <input type="radio" name="experiencia" value="Amateur"/><br>
-            
-            <label for="ELO">Puntuación ELO:</label>
-            <select name="ELO">
-                <option value="principiante">0-800</option>
-                <option value="intermedio">801-1500</option>
-                <option value="avanzado">1501-2000</option>
-                <option value="experto">+2000</option>
-            </select>
+          <div>Jugador federado</div>
+          <input type="radio" name="experiencia" value="Jugador federado" />
+          <div>Amateur</div>
+          <input type="radio" name="experiencia" value="Amateur"/><br>
+          
+          <label for="ELO">Puntuación ELO:</label>
+          <select name="ELO">
+              <option value="principiante">0-800</option>
+              <option value="intermedio">801-1500</option>
+              <option value="avanzado">1501-2000</option>
+              <option value="experto">+2000</option>
+          </select>
 
-            <div>¿Te gustaría participar en torneos?</div>
-            <label for="abiertos">Abiertos</label>
-            <input type="checkbox" name="abiertos" value="abiertos"/>
-            <label for="federados">Federados</label>
-            <input type="checkbox" name="federados" value="federados"/><br>
+          <div>¿Te gustaría participar en torneos?</div>
+          <label for="abiertos">Abiertos</label>
+          <input type="checkbox" name="abiertos" value="abiertos"/>
+          <label for="federados">Federados</label>
+          <input type="checkbox" name="federados" value="federados"/><br>
 
-            <input type="submit" value="Enviar formulario">
-            <input type="reset" value="Borrar">
-        </form>
-    </div>
-    <footer>
+          <input type="submit" value="Enviar formulario">
+          <input type="reset" value="Borrar">
+      </form>
+  </div></div>
+
+    <div class="gridCards">
+      <div class="card" style="width: 18rem;">
+          <img src="../img/chess_league.png" class="card-img-top" alt="logo liga de ajedrez">
+          <div class="card-body">
+              <p class="card-text">4ta temporada de la Liga de
+                Ajedrez Colegial: Playoffs</p>
+          </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+          <img src="../img/krush_playing.jpg" class="card-img-top" alt="Irina Krush jugando">
+          <div class="card-body">
+              <p class="card-text">Krush dominando el campeonato:
+                Copa América, 8va fecha</p>
+          </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+          <img src="../img/carlsen.jpeg" class="card-img-top" alt="Magnus Carlsen en torneo">
+          <div class="card-body">
+              <p class="card-text">Carlsen nuevamente a la cabeza:
+                Oslo Esports Cup, 6ta fecha</p>
+          </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+          <img src="../img/hikaru noticia.jpg" class="card-img-top" alt="Hikaru ganador de Speed Chess">
+          <div class="card-body">
+              <p class="card-text">Nakamura, el ganador de la semana n.°14
+                del Toneo de Ajedrez Rápido</p>
+          </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+          <img src="../img/carlsen noticia.jpg" class="card-img-top" alt="Carlsen ganador">
+          <div class="card-body">
+              <p class="card-text">¡Carlsen gana el Torneo de Jueves de Titulados
+                en una sorpresiva aparición!</p>
+          </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+          <img src="../img/levy noticia.jpg" class="card-img-top" alt="levy gana a Nemo">
+          <div class="card-body">
+              <p class="card-text">Levy Rozman gana a Nemo en el Torneo
+                "No soy un Gran Maestro", ronda n.°16</p>
+          </div>
+      </div>
+  </div>
+
+    
+    <footer class="footerNoticias">
         <p>Para más información, contáctanos! <br>
             info@chessspace.com </p>
     </footer>
@@ -89,7 +196,10 @@
         AOS.init();
       </script>
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+   <script src="../particulas/plugins/particles/js/particles.js"></script>
+   <script src="../particulas/plugins/particles/js/lib/stats.js"></script>
+   <script src="../particulas/plugins/particles/js/app.js"></script>
+ 
 </body>
 
 
