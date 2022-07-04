@@ -265,9 +265,13 @@ grid-template-rows: 1fr;
           grid-template-rows: 1fr;
     }
     .video iframe {
-      width: 300px;
-      height: 150px;
+        width: 300px;
+        height: 150px;
     }
+    .video.aos-init.aos-animate, .tabla.aos-init{
+      transform: translateY(0px);
+      transition-duration: 0s;
+      transition-property: none;}
     .tabla table {
       width: 300px;
       height: 150px;
@@ -337,10 +341,13 @@ grid-template-rows: 1fr;
       -ms-grid-rows: 1fr;
           grid-template-rows: 1fr;
     }
+    .video.aos-init.aos-animate, .tabla.aos-init{
+      transform: translateY(0px);
+      transition-duration: 0s;
+      transition-property: none;}
     .video iframe {
       width: 300px;
       height: 150px;
-      padding-left: 100px;
     }
     .tabla table {
       width: 300px;
@@ -414,7 +421,6 @@ grid-template-rows: 1fr;
     .video iframe {
       width: 300px;
       height: 150px;
-      padding-left: 100px;
     }
     .tabla table {
       width: 300px;
