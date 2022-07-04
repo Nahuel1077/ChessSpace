@@ -1,6 +1,55 @@
 @import "generales";
 
 $color: rgb(184,134,11);
+/*INDEX*/
+/*Tablero*/
+.set{
+  padding-bottom: 20px;
+  padding-top: 5px;
+  p{
+    position: relative;
+    float: left;
+    width: 200px;
+  }
+.tablero  {
+  border: solid 2px black; 
+  height: 600px;
+  width: 600px;
+  position: relative;
+  margin-left: 20%;
+  .bl {
+    background-color: #525252;
+  }
+  .ng {
+    background-color: #141450;
+  }
+  tbody tr th {
+    border: solid 2px white;
+    width: 74.75px;
+    height: 74.75px;
+    h6{
+      font-weight: bold;
+    }
+    .bishop{
+      width: 15px;
+      height: 30px;
+    }
+    .king{
+      width: 20px;
+      height: 40px;
+    }
+    .pawn{
+      height: 30px;
+      width: 20px;
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      margin-left: 20px;
+    }
+  }
+}
+}
 
 /*Cards*/
 .gridCards {
@@ -17,14 +66,12 @@ $color: rgb(184,134,11);
         justify-self: center;
         text-align: -webkit-center;
         background-image: url(../img/cardsBackground.jpg);
-        .card img {
-            width: 100%;
-            height: 50%;
-            object-fit: cover;
+        .card-img-top {
+          object-fit: cover;
+          height: 250px;
         }
     }
 }
-
 /*Multimedia*/
 .multimedia {
 display: grid;
@@ -39,12 +86,11 @@ grid-template-rows: 1fr;
     height: 300px;
 }
 .tabla table {
-    width: 120%;
+    width: 100%;
     height: 300px;
 }
 }
-
-/*ANIMACIÓN*/
+/*Animación*/
 .card {
     transition-property: all;
     transition-duration: 2s;
@@ -53,7 +99,7 @@ grid-template-rows: 1fr;
     } 
 }
 
-/*Historia*/
+/*HISTORIA*/
 #historia, #actualidad {
     border-bottom: solid $color;
 }
@@ -64,17 +110,14 @@ grid-template-rows: 1fr;
     text-align: justify;
     position: relative;
 }
-.footerHistoria {
-  position: relative;
-}
+
 #titulo {
     text-decoration: underline solid $color;
     padding-top: 3rem;
 }
 
-/*Eventos*/
+/*EVENTOS*/
 .torneos {
-    background-color: #0000006e;
     text-align: center;
     width: 100%;
     background-image: url(../img/space.jpg);
@@ -82,6 +125,10 @@ grid-template-rows: 1fr;
       border: solid black;
     }
 }
+.form{
+  background-color: #1e1e1eab;
+}
+
 .headerEventos {
   position: relative;
 }
@@ -94,9 +141,7 @@ grid-template-rows: 1fr;
   padding-top: 3rem;
   position: relative;
 }
-.footerEventos{
-  position: relative;
-}
+
 /*Responsive*/
 @media (max-width:800px){
   .eventosGrid {
@@ -108,7 +153,7 @@ grid-template-rows: 1fr;
   }
 }
 
-/*Noticias*/
+/*NOTICIAS*/
 .destacado {
     padding-top: 40px;
     padding-bottom: 10px;
@@ -127,6 +172,11 @@ grid-template-rows: 1fr;
   transition-duration: 1s;
   transform: none;
 }
+
+.formulario{
+  background-color: #1e1e1eab;
+}
+
 .noticiasGrid {
   display: grid;
   grid-template-areas: 'carousel slide carousel slide formulario formulario';
@@ -134,7 +184,7 @@ grid-template-rows: 1fr;
   grid-template-rows: 1fr;
 }
  .footerNoticias {
-   padding-top: 23rem;
+   padding-top: 20rem;
    position: relative;
 }
 /*Responsive*/
@@ -142,22 +192,15 @@ grid-template-rows: 1fr;
   .noticiasGrid {
     grid: none;
   }
-  .formulario {
-    display: none;
-  }
   .carousel-caption{
     display: contents;
   }
   .carousel-indicators{
     display: none;
   }
-  .footerNoticias {
-    display: none;
-  }
 }
 
-/*Top Players*/
-
+/*TOP PLAYERS*/
 #topPlayers {
   text-decoration: underline solid 3px $color;
   padding-top: 3rem;
@@ -174,14 +217,12 @@ grid-template-rows: 1fr;
     .player {
         padding-top: 3rem;
           p {
-            text-decoration: underline solid 3px goldenrod;
+            text-decoration: underline solid 3px $color;
         }
     }
 }
-.footerPlayers {
-  position: relative;
-}
-/*ANIMACIÓN*/
+
+/*Animación*/
 .player {
     transition-property: all;
     transition-duration: 2s;
@@ -190,13 +231,9 @@ grid-template-rows: 1fr;
     } 
 }
 
-/*Estilos Mobile*/
+/*ESTILOS MOBILE*/
 /*Smartphones*/
 @media (max-width: 320px) {
-    .bg-propio {
-      background-color: darkred;
-      width: 100%;
-    }
     .gridCards {
       display: -ms-grid;
       display: grid;
@@ -204,8 +241,11 @@ grid-template-rows: 1fr;
           grid-template-columns: 1fr;
       -ms-grid-rows: auto;
           grid-template-rows: auto;
-      width: 320px;
+      width: 100%;
       height: 90%;
+    }
+    .footerNoticias{
+      display: none;
     }
     .multimedia {
       display: -ms-grid;
@@ -240,8 +280,8 @@ grid-template-rows: 1fr;
     .players {
       display: -ms-grid;
       display: grid;
-      -ms-grid-columns: 2fr 2fr;
-          grid-template-columns: 2fr 2fr;
+      -ms-grid-columns: 1fr;
+          grid-template-columns: 1fr;
       -ms-grid-rows: 3fr 3fr 3fr 3fr 3fr 3fr;
           grid-template-rows: 3fr 3fr 3fr 3fr 3fr 3fr;
       justify-items: center;
@@ -276,6 +316,9 @@ grid-template-rows: 1fr;
           grid-template-rows: auto;
       width: 100%;
       height: 100%;
+    }
+    .footerNoticias{
+      display: none;
     }
     .multimedia {
       display: -ms-grid;
@@ -347,6 +390,9 @@ grid-template-rows: 1fr;
           grid-template-rows: auto;
       width: 100%;
       height: 100%;
+    }
+    .footerNoticias {
+      display: none;
     }
     .multimedia {
       display: -ms-grid;

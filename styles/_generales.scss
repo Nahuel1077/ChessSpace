@@ -3,9 +3,16 @@
     padding: 0;
 }
 
+html{
+    scroll-snap-type: y proximity;
+}
+.set, .navbar, footer{
+    scroll-snap-align: start;
+    scroll-snap-stop: normal;
+}
+
 /*Body*/
 body {
-    /*background-image: url(../img/pattern.png);*/
     font-family: 'Oswald', sans-serif;
     font-size: medium;
     font-weight: bolder;
@@ -19,28 +26,76 @@ header {
 }
 
 /*NavBar*/
-.logo {
-    width: 30px;
-    background-color: white;    
+.navbar.navbar-expand-lg.navbar-light.bg-propio {
+    position: sticky;
+    top: 0px;
+    z-index: +2;
+}
+@media (max-width: 991px){
+    div#navbarScroll{
+        padding-left: 70%!important;
+        ul li a {
+            padding-left: 0!important;
+        }
+        /*Se utilizó !important para poder pisar un valor !important por defecto del resposive del Bootstrap*/
+    }
+    .set{
+        display: none;
+    }
+    html{
+        scroll-snap-type: none;
+    }
+}
+@media (max-width: 450px){
+    div#navbarScroll{
+        padding-left: 60%!important;
+        ul li a {
+            padding-left: 0!important;
+        }
+        /*Se utilizó !important para poder pisar un valor !important por defecto del resposive del Bootstrap*/
+    }
+    .set{
+        display: none;
+    }
+    html{
+        scroll-snap-type: none;
+    }
 }
 
 div#navbarScroll {
     flex: none;
+    padding-left: 0%;
     ul li a {
         color: white;
-        text-decoration: none;}
+        text-decoration: none;
+        padding-left: 5rem;
+    }
 }
 
-li.nav-item {
-    padding-right: 9rem;
-    a {
-        color: white;
-        padding-left: 13rem;
-    }
+.nav-item :hover{
+        opacity: 0.5;
+}
+
+a :hover{
+    opacity: 0.5;
+}
+
+.logo {
+    width: 30px;
+    background-color: white;
+    border-radius: 50px;
 }
 
 button.navbar-toggler {
     background-color: white;
+}
+
+.navbar-toggler {
+    margin-left: 60%
+}
+.navbar-nav-scroll{
+     max-height: none;
+    overflow-y: auto;
 }
 
 .bg-propio {
@@ -53,15 +108,34 @@ footer {
     text-align: center;
     padding-top: 1rem;
     position: relative;
+    .contacto{
+        position: absolute;
+        height: 4rem;
+        width: 100%;
+        a {
+            padding-left: 1rem;
+            img{
+                width: 3rem;
+                height: 3rem;
+                border-radius: 20px;
+            }
+        }
+    }
+    $redes:(
+        instagram:#ff5100,
+        mail:#a91000,
+        whatsapp:#04cc04
+    );
+    @each $red, $color in $redes{
+        .red--#{$red}{
+            background-color: $color;
+        }
+
+    }
 }
 
-  /*Script Particles*/
-  
-/* =============================================================================
-   My CSS
-   ========================================================================== */
 
-/* ---- base ---- */
+  /*Script Particles*/
 html,body{ 
 	width:100%;
 	height:100%;

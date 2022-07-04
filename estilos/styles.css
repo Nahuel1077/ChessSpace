@@ -4,9 +4,18 @@
   padding: 0;
 }
 
+html {
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+}
+
+.set, .navbar, footer {
+  scroll-snap-align: start;
+  scroll-snap-stop: normal;
+}
+
 /*Body*/
 body {
-  /*background-image: url(../img/pattern.png);*/
   font-family: 'Oswald', sans-serif;
   font-size: medium;
   font-weight: bolder;
@@ -20,33 +29,85 @@ header {
 }
 
 /*NavBar*/
-.logo {
-  width: 30px;
-  background-color: white;
+.navbar.navbar-expand-lg.navbar-light.bg-propio {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: +2;
+}
+
+@media (max-width: 991px) {
+  div#navbarScroll {
+    padding-left: 70% !important;
+    /*Se utilizó !important para poder pisar un valor !important por defecto del resposive del Bootstrap*/
+  }
+  div#navbarScroll ul li a {
+    padding-left: 0 !important;
+  }
+  .set {
+    display: none;
+  }
+  html {
+    -ms-scroll-snap-type: none;
+        scroll-snap-type: none;
+  }
+}
+
+@media (max-width: 450px) {
+  div#navbarScroll {
+    padding-left: 60% !important;
+    /*Se utilizó !important para poder pisar un valor !important por defecto del resposive del Bootstrap*/
+  }
+  div#navbarScroll ul li a {
+    padding-left: 0 !important;
+  }
+  .set {
+    display: none;
+  }
+  html {
+    -ms-scroll-snap-type: none;
+        scroll-snap-type: none;
+  }
 }
 
 div#navbarScroll {
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
+  padding-left: 0%;
 }
 
 div#navbarScroll ul li a {
   color: white;
   text-decoration: none;
+  padding-left: 5rem;
 }
 
-li.nav-item {
-  padding-right: 9rem;
+.nav-item :hover {
+  opacity: 0.5;
 }
 
-li.nav-item a {
-  color: white;
-  padding-left: 13rem;
+a :hover {
+  opacity: 0.5;
+}
+
+.logo {
+  width: 30px;
+  background-color: white;
+  border-radius: 50px;
 }
 
 button.navbar-toggler {
   background-color: white;
+}
+
+.navbar-toggler {
+  margin-left: 60%;
+}
+
+.navbar-nav-scroll {
+  max-height: none;
+  overflow-y: auto;
 }
 
 .bg-propio {
@@ -61,11 +122,35 @@ footer {
   position: relative;
 }
 
+footer .contacto {
+  position: absolute;
+  height: 4rem;
+  width: 100%;
+}
+
+footer .contacto a {
+  padding-left: 1rem;
+}
+
+footer .contacto a img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 20px;
+}
+
+footer .red--instagram {
+  background-color: #ff5100;
+}
+
+footer .red--mail {
+  background-color: #a91000;
+}
+
+footer .red--whatsapp {
+  background-color: #04cc04;
+}
+
 /*Script Particles*/
-/* =============================================================================
-   My CSS
-   ========================================================================== */
-/* ---- base ---- */
 html, body {
   width: 100%;
   height: 100%;
@@ -85,6 +170,66 @@ html, body {
 }
 
 /*Fin de estilos generales*/
+/*INDEX*/
+/*Tablero*/
+.set {
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+
+.set p {
+  position: relative;
+  float: left;
+  width: 200px;
+}
+
+.set .tablero {
+  border: solid 2px black;
+  height: 600px;
+  width: 600px;
+  position: relative;
+  margin-left: 20%;
+}
+
+.set .tablero .bl {
+  background-color: #525252;
+}
+
+.set .tablero .ng {
+  background-color: #141450;
+}
+
+.set .tablero tbody tr th {
+  border: solid 2px white;
+  width: 74.75px;
+  height: 74.75px;
+}
+
+.set .tablero tbody tr th h6 {
+  font-weight: bold;
+}
+
+.set .tablero tbody tr th .bishop {
+  width: 15px;
+  height: 30px;
+}
+
+.set .tablero tbody tr th .king {
+  width: 20px;
+  height: 40px;
+}
+
+.set .tablero tbody tr th .pawn {
+  height: 30px;
+  width: 20px;
+}
+
+.set .tablero tbody tr th img {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+}
+
 /*Cards*/
 .gridCards {
   display: -ms-grid;
@@ -108,11 +253,10 @@ html, body {
   background-image: url(../img/cardsBackground.jpg);
 }
 
-.gridCards .card .card img {
-  width: 100%;
-  height: 50%;
+.gridCards .card .card-img-top {
   -o-object-fit: cover;
      object-fit: cover;
+  height: 250px;
 }
 
 /*Multimedia*/
@@ -139,11 +283,11 @@ html, body {
 }
 
 .multimedia .tabla table {
-  width: 120%;
+  width: 100%;
   height: 300px;
 }
 
-/*ANIMACIÓN*/
+/*Animación*/
 .card {
   -webkit-transition-property: all;
   transition-property: all;
@@ -156,7 +300,7 @@ html, body {
           transform: scale(1.1);
 }
 
-/*Historia*/
+/*HISTORIA*/
 #historia, #actualidad {
   border-bottom: solid darkgoldenrod;
 }
@@ -169,19 +313,14 @@ html, body {
   position: relative;
 }
 
-.footerHistoria {
-  position: relative;
-}
-
 #titulo {
   -webkit-text-decoration: underline solid darkgoldenrod;
           text-decoration: underline solid darkgoldenrod;
   padding-top: 3rem;
 }
 
-/*Eventos*/
+/*EVENTOS*/
 .torneos {
-  background-color: #0000006e;
   text-align: center;
   width: 100%;
   background-image: url(../img/space.jpg);
@@ -189,6 +328,10 @@ html, body {
 
 .torneos tr {
   border: solid black;
+}
+
+.form {
+  background-color: #1e1e1eab;
 }
 
 .headerEventos {
@@ -208,10 +351,6 @@ html, body {
   position: relative;
 }
 
-.footerEventos {
-  position: relative;
-}
-
 /*Responsive*/
 @media (max-width: 800px) {
   .eventosGrid {
@@ -223,7 +362,7 @@ html, body {
   }
 }
 
-/*Noticias*/
+/*NOTICIAS*/
 .destacado {
   padding-top: 40px;
   padding-bottom: 10px;
@@ -249,6 +388,10 @@ html, body {
           transform: none;
 }
 
+.formulario {
+  background-color: #1e1e1eab;
+}
+
 .noticiasGrid {
   display: -ms-grid;
   display: grid;
@@ -260,7 +403,7 @@ html, body {
 }
 
 .footerNoticias {
-  padding-top: 23rem;
+  padding-top: 20rem;
   position: relative;
 }
 
@@ -269,21 +412,15 @@ html, body {
   .noticiasGrid {
     grid: none;
   }
-  .formulario {
-    display: none;
-  }
   .carousel-caption {
     display: contents;
   }
   .carousel-indicators {
     display: none;
   }
-  .footerNoticias {
-    display: none;
-  }
 }
 
-/*Top Players*/
+/*TOP PLAYERS*/
 #topPlayers {
   -webkit-text-decoration: underline solid 3px darkgoldenrod;
           text-decoration: underline solid 3px darkgoldenrod;
@@ -311,15 +448,11 @@ html, body {
 }
 
 .players .player p {
-  -webkit-text-decoration: underline solid 3px goldenrod;
-          text-decoration: underline solid 3px goldenrod;
+  -webkit-text-decoration: underline solid 3px darkgoldenrod;
+          text-decoration: underline solid 3px darkgoldenrod;
 }
 
-.footerPlayers {
-  position: relative;
-}
-
-/*ANIMACIÓN*/
+/*Animación*/
 .player {
   -webkit-transition-property: all;
   transition-property: all;
@@ -332,13 +465,9 @@ html, body {
           transform: scale(1.5);
 }
 
-/*Estilos Mobile*/
+/*ESTILOS MOBILE*/
 /*Smartphones*/
 @media (max-width: 320px) {
-  .bg-propio {
-    background-color: darkred;
-    width: 100%;
-  }
   .gridCards {
     display: -ms-grid;
     display: grid;
@@ -346,8 +475,11 @@ html, body {
     grid-template-columns: 1fr;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
-    width: 320px;
+    width: 100%;
     height: 90%;
+  }
+  .footerNoticias {
+    display: none;
   }
   .multimedia {
     display: -ms-grid;
@@ -359,7 +491,8 @@ html, body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-        grid-template-areas: 'video' 'tabla';
+        grid-template-areas: 'video'
+ 'tabla';
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -ms-grid-rows: 1fr;
@@ -381,8 +514,8 @@ html, body {
   .players {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 2fr 2fr;
-    grid-template-columns: 2fr 2fr;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
     -ms-grid-rows: 3fr 3fr 3fr 3fr 3fr 3fr;
     grid-template-rows: 3fr 3fr 3fr 3fr 3fr 3fr;
     justify-items: center;
@@ -418,6 +551,9 @@ html, body {
     width: 100%;
     height: 100%;
   }
+  .footerNoticias {
+    display: none;
+  }
   .multimedia {
     display: -ms-grid;
     display: grid;
@@ -428,7 +564,8 @@ html, body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-        grid-template-areas: 'video' 'tabla';
+        grid-template-areas: 'video'
+ 'tabla';
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -ms-grid-rows: 1fr;
@@ -488,6 +625,9 @@ html, body {
     width: 100%;
     height: 100%;
   }
+  .footerNoticias {
+    display: none;
+  }
   .multimedia {
     display: -ms-grid;
     display: grid;
@@ -498,7 +638,8 @@ html, body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-        grid-template-areas: 'video' 'tabla';
+        grid-template-areas: 'video'
+ 'tabla';
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -ms-grid-rows: 1fr;
